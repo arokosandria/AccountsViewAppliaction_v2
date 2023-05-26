@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "c48be1aa-1771-497a-8200-1bcc2053dd80",
+		"name": "Persons",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddFirstPerson",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"konto_numer_1\",\n  \"email\": \"karolina.mrowka@interia.pl\",\n  \"birthday\": \"1990-05-05\",\n  \"firstName\": \"Karolina\",\n  \"lastName\": \"Mrowka\",\n  \"pesel\":\"73120639665\",\n  \"address\": {\n    \"street\": \"Czachowskiego\",\n    \"number\": 2,\n    \"numberFlat\": 22,\n    \"postCode\": \"23-900\",\n    \"city\": \"krakow\"\n\n  }\n\n}"
+				},
+				"url": {
+					"raw": "{{tst}}/persons",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddSecondPerson",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"konto_numer_2\",\n  \"email\": \"karolina.mrowka@interia.pl\",\n  \"birthday\": \"1990-05-05\",\n  \"firstName\": \"Karolina\",\n  \"lastName\": \"Mrowka\",\n  \"pesel\":\"06281427518\",\n  \"address\": {\n    \"street\": \"Czachowskiego\",\n    \"number\": 2,\n    \"numberFlat\": 22,\n    \"postCode\": \"23-900\",\n    \"city\": \"krakow\"\n\n  }\n\n}"
+				},
+				"url": {
+					"raw": "{{tst}}/persons",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddThirdPerson",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"konto_numer_3\",\n  \"email\": \"karolina.mrowka@interia.pl\",\n  \"birthday\": \"1990-05-05\",\n  \"firstName\": \"Karolina\",\n  \"lastName\": \"Mrowka\",\n  \"pesel\":\"57051493174\",\n  \"address\": {\n    \"street\": \"Miłkowskiego\",\n    \"number\": 2,\n    \"numberFlat\": 22,\n    \"postCode\": \"23-900\",\n    \"city\": \"krakow\"\n\n  }\n\n}"
+				},
+				"url": {
+					"raw": "{{tst}}/persons",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPersons",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"konto_numer_3\",\n  \"email\": \"karolina.mrowka@interia.pl\",\n  \"birthday\": \"1990-05-05\",\n  \"firstName\": \"Karolina\",\n  \"lastName\": \"Mrowka\",\n  \"pesel\":\"57051493174\",\n  \"address\": {\n    \"street\": \"Miłkowskiego\",\n    \"number\": 2,\n    \"numberFlat\": 22,\n    \"postCode\": \"23-900\",\n    \"city\": \"krakow\"\n\n  }\n\n}"
+				},
+				"url": {
+					"raw": "{{tst}}/persons",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPersonByName",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"konto_numer_3\",\n  \"email\": \"karolina.mrowka@interia.pl\",\n  \"birthday\": \"1990-05-05\",\n  \"firstName\": \"Karolina\",\n  \"lastName\": \"Mrowka\",\n  \"pesel\":\"57051493174\",\n  \"address\": {\n    \"street\": \"Miłkowskiego\",\n    \"number\": 2,\n    \"numberFlat\": 22,\n    \"postCode\": \"23-900\",\n    \"city\": \"krakow\"\n\n  }\n\n}"
+				},
+				"url": {
+					"raw": "{{tst}}/persons/konto_numer_1",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"persons",
+						"konto_numer_1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePerson",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"konto_numer_1\",\n  \"email\": \"karolina.mrowka.update@interia.pl\",\n  \"lastName\": \"Zmienione\"\n\n}"
+				},
+				"url": {
+					"raw": "{{tst}}/persons/konto_numer_1",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"persons",
+						"konto_numer_1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePerson",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{tst}}/persons/1",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"persons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonsValidation1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"if(pm.response.code === 200){\r",
+							"    console.log (\"200 was returned\");\r",
+							"} \r",
+							"else { \r",
+							" console.log(\"no id ...\");\r",
+							" pm.test(\"Check the error message\", () => {   \r",
+							"    pm.expect(jsonData.errors[0]).to.eql(\"must be a well-formed email address\"); \r",
+							"    pm.expect(jsonData.status).to.eql(400);\r",
+							" });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"validation_person_email\",\r\n  \"email\": \"karolina.mrowka\",\r\n  \"birthday\": \"1990-05-05\",\r\n  \"firstName\": \"Karolina\",\r\n  \"lastName\": \"Mrowka\",\r\n  \"pesel\":\"73120639665\",\r\n  \"address\": {\r\n    \"street\": \"Czachowskiego\",\r\n    \"number\": 2,\r\n    \"numberFlat\": 22,\r\n    \"postCode\": \"23-900\",\r\n    \"city\": \"krakow\"\r\n\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "{{tst}}/persons",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonsValidation2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"if(pm.response.code === 200){\r",
+							"    console.log (\"200 was returned\");\r",
+							"} \r",
+							"else { \r",
+							" console.log(\"no id ...\");\r",
+							" pm.test(\"Check the error message\", () => {   \r",
+							"    pm.expect(jsonData.errors[0]).to.eql(\"invalid Polish National Identification Number (PESEL)\"); \r",
+							"    pm.expect(jsonData.status).to.eql(400);\r",
+							" });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"validation_person_pesel\",\r\n  \"email\": \"karolina.mrowka@interia.pl\",\r\n  \"birthday\": \"1990-05-05\",\r\n  \"firstName\": \"Karolina\",\r\n  \"lastName\": \"Mrowka\",\r\n  \"pesel\":\"73120639660\",\r\n  \"address\": {\r\n    \"street\": \"Czachowskiego\",\r\n    \"number\": 2,\r\n    \"numberFlat\": 22,\r\n    \"postCode\": \"23-900\",\r\n    \"city\": \"krakow\"\r\n\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "{{tst}}/persons",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonsValidation3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"if(pm.response.code === 200){\r",
+							"    console.log (\"200 was returned\");\r",
+							"} \r",
+							"else { \r",
+							" console.log(\"no id ...\");\r",
+							" pm.test(\"Check the error message\", () => {   \r",
+							"    pm.expect(jsonData.errors[0]).to.eql(\"must be a past date\"); \r",
+							"    pm.expect(jsonData.status).to.eql(400);\r",
+							" });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"validation_person_birthday\",\r\n  \"email\": \"karolina.mrowka@interia.pl\",\r\n  \"birthday\": \"2024-05-05\",\r\n  \"firstName\": \"Karolina\",\r\n  \"lastName\": \"Mrowka\",\r\n  \"pesel\":\"73120639665\",\r\n  \"address\": {\r\n    \"street\": \"Czachowskiego\",\r\n    \"number\": 2,\r\n    \"numberFlat\": 22,\r\n    \"postCode\": \"23-900\",\r\n    \"city\": \"krakow\"\r\n\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "{{tst}}/persons",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

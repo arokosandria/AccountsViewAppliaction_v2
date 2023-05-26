@@ -1,0 +1,9 @@
+###pobranie danej waluty -REST TEMPLATE
+GET http://localhost:8080/api/nbp/NOK
+
+###pobranie najwyższą wartość danej waluty w przeciągu określonej liczby dni REST TEMPLATE
+GET http://localhost:8080/api/nbp/NOK/100
+
+###pokazanie jaka wartosc danej waluty posiadamy na podstawie balance konta
+
+GET http://localhost:8080/api/currency/82102052260000610204177890/SEK

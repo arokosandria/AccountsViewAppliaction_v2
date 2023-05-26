@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "4b69fc8d-7535-4e08-912b-f81eae5befa1",
+		"name": "KafkaAndCurrency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PutKafkaAddress",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\"id\":2,\r\n  \"street\": \"Mickiewicza\",\r\n    \"number\": 12,\r\n    \"numberFlat\": 22,\r\n    \"postCode\": \"27-600\",\r\n    \"city\": \"Sandomierz\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/kafka/update",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"kafka",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetApiNbpCurrency",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\"id\":1,\r\n  \"street\": \"Mickiewicza\",\r\n    \"number\": 12,\r\n    \"numberFlat\": 22,\r\n    \"postCode\": \"27-600\",\r\n    \"city\": \"Sandomierz\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/nbp/NOK",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"nbp",
+						"NOK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetApiNbpCurrencyofDay",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\"id\":1,\r\n  \"street\": \"Mickiewicza\",\r\n    \"number\": 12,\r\n    \"numberFlat\": 22,\r\n    \"postCode\": \"27-600\",\r\n    \"city\": \"Sandomierz\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/nbp/USD/100",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"nbp",
+						"USD",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNumberAccountAndCurrency",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\"id\":1,\r\n  \"street\": \"Mickiewicza\",\r\n    \"number\": 12,\r\n    \"numberFlat\": 22,\r\n    \"postCode\": \"27-600\",\r\n    \"city\": \"Sandomierz\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/currency/49102028922276300500000005/NOK",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"currency",
+						"49102028922276300500000005",
+						"NOK"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

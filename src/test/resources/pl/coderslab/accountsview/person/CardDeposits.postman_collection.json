@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "d860cd60-3289-45f9-9d2b-6f792110b034",
+		"name": "CardDeposits",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PostFirstCardDeposit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"personName\": \"konto_numer_2\",\r\n  \"numberAccount\": \"49102028922276300500000005\",\r\n  \"name\": \"karta Mastercard Lojalnosciowa\",\r\n  \"numberCard\": \"223443342233\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/card",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostSecondCardDeposit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"personName\": \"konto_numer_2\",\r\n  \"numberAccount\": \"49102028922276300500000005\",\r\n  \"name\": \"karta Mastercard Lojalnosciowa\",\r\n  \"numberCard\": \"223443342234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/card",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostThirdCardDeposit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"personName\": \"konto_numer_2\",\r\n  \"numberAccount\": \"49102028922276300500000005\",\r\n  \"name\": \"karta Mastercard Lojalnosciowa\",\r\n  \"numberCard\": \"223443342235\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/card",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCards",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"personName\": \"konto_numer_2\",\r\n  \"numberAccount\": \"82102052260000610204177895\",\r\n  \"name\": \"karta Mastercard Lojalnosciowa\",\r\n  \"numberCard\": \"223443342234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/card",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCardByNumber",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"personName\": \"konto_numer_2\",\r\n  \"numberAccount\": \"82102052260000610204177895\",\r\n  \"name\": \"karta Mastercard Lojalnosciowa\",\r\n  \"numberCard\": \"223443342234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/card/223443342235",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"card",
+						"223443342235"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCardsByAccountNumber",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"personName\": \"konto_numer_2\",\r\n  \"numberAccount\": \"82102052260000610204177895\",\r\n  \"name\": \"karta Mastercard Lojalnosciowa\",\r\n  \"numberCard\": \"223443342234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/card/account/49102028922276300500000005",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"card",
+						"account",
+						"49102028922276300500000005"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutCardDeposit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"personName\": \"konto_numer_2\",\r\n  \"name\": \"karta Mastercard Lojalnosciowa i Visa\",\r\n  \"numberCard\": \"223443342234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/card/223443342234",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"card",
+						"223443342234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCardNumber",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"personName\": \"konto_numer_2\",\r\n  \"name\": \"karta Mastercard Lojalnosciowa i Visa\",\r\n  \"numberCard\": \"223443342234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/card/1",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"card",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCardDepositValidation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"if(pm.response.code === 200){\r",
+							"    console.log (\"200 was returned\");\r",
+							"} \r",
+							"else { \r",
+							" console.log(\"no id ...\");\r",
+							" pm.test(\"Check the error message\", () => {   \r",
+							"    pm.expect(jsonData.errors[0]).to.eql(\"numberAccount jest wymagane\"); \r",
+							"    pm.expect(jsonData.status).to.eql(400);\r",
+							" });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"personName\": \"konto_numer_2\",\r\n\r\n  \"name\": \"karta Mastercard Lojalnosciowa\",\r\n  \"numberCard\": \"223443342234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{tst}}/card",
+					"host": [
+						"{{tst}}"
+					],
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

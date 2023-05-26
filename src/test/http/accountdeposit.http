@@ -1,0 +1,28 @@
+###Utworzenie konta
+POST http://localhost:8080/api/account
+Content-Type: application/json
+
+{ "name": "unikalna_nazwa_konta",
+  "numberAccount": "82102052260000610204177890",
+  "balance": 333.22,
+ "nameAccount": "nameAccount"
+
+}
+
+###modyfikacja konta
+PUT http://localhost:8080/api/account/82102052260000610204177890
+Content-Type: application/json
+
+{
+  "numberAccount": "82102052260000610204177890",
+  "balance": 433.22,
+  "nameAccount": "nameAccount_update"
+
+}
+
+###pobranie wszystkich kont
+GET http://localhost:8080/api/account
+
+
+###usuniecie konta
+DELETE http://localhost:8080/api/account/1

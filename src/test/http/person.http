@@ -1,0 +1,40 @@
+### Utworzenie osoby
+POST http://localhost:8080/api/persons
+Content-Type: application/json
+
+{
+  "name": "unikalna_nazwa_konta",
+  "email": "karolina.mrowka@interia.pl",
+  "birthday": "1990-05-05",
+  "firstName": "Karolina",
+  "lastName": "Mrowka",
+  "pesel":"06212831799",
+  "address": {
+    "street": "Czachowskiego",
+    "number": 2,
+    "numberFlat": 22,
+    "postCode": "23-900",
+    "city": "krakow"
+
+  }
+}
+
+### Modyfikacja osoby
+PUT http://localhost:8080/api/persons/unikalna_nazwa_konta
+Content-Type: application/json
+
+{
+  "name": "unikalna_nazwa_konta",
+  "email": "karolina.mrowka.update@interia.pl",
+  "lastName": "Zmienione"
+
+}
+
+###Pobieranie wszystkich osob
+GET http://localhost:8080/api/persons
+
+###Pobieranie osoby po name
+GET http://localhost:8080/api/persons/unikalna_nazwa_konta
+
+###usuwanie osoby
+DELETE http://localhost:8080/api/persons/1

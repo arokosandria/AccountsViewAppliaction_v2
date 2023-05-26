@@ -1,0 +1,30 @@
+###Utworzenie karty
+POST http://localhost:8080/api/card
+Content-Type: application/json
+
+{
+  "personName": "unikalna_nazwa_konta",
+  "numberAccount": "82102052260000610204177890",
+  "name": "karta Mastercard Lojalnosciowa",
+  "numberCard": "223443342233"
+}
+
+###Modyfikacja karty
+PUT http://localhost:8080/api/card/223443342233
+Content-Type: application/json
+
+{
+  "personName": "unikalna_nazwa_konta",
+  "name": "karta Mastercard Lojalnosciowa i Visa",
+  "numberCard": "223443342233"
+}
+
+###pobranie kart
+GET http://localhost:8080/api/card
+
+###pobranie kart po numerze konta
+GET http://localhost:8080/api/card/account/82102052260000610204177890
+
+
+###usuniecie karty
+DELETE http://localhost:8080/api/card/1
